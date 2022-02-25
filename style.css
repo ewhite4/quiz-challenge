@@ -24,6 +24,12 @@ p {
 .btn {
     font-size: 25px;
     border-radius: 30px;
+    background-color: red;
     /* display: table; */
     /* margin: auto; */
 }
+
+count {
+    text-align: center;
+}
+
