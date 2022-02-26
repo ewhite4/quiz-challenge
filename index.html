@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
     <title>Quiz</title>
 </head>
 <body>
@@ -15,14 +14,24 @@
                         <div class="answer-block" data-question-type="multiple-choice"></div>      
                    
                     <!-- <center> -->
-                        <div class="button-container">
-                            <button class="btn">Submit</button>
-                        </div>
+                        <div class="start-btn"><button>Start Quiz</button></div>
                     </div>
                     <!-- </center> -->
                     
-                    <div id="count">Start</div>
+                    <!-- info-box -->
+                        <div class="info-box">
+                            <div class="info-title"><span>Quiz Rules</span></div>
+                                <div class="info=list">
+                                    <div class="info">You have 1 Minute to complete</div>
+                                    <div class="info">B. Wrong Answers will knock off 15 seconds</div>
+                                    <div class="info">C. Right Answers will add 15 seconds.</div>
+                                    <div class="info">D. Your Score will be provided at the end.</div>                                   
+                                </div>
+                             <button class="quit">Exit Quiz</button>
+                             <button class="restart">Continue</button>   
+                        </div>
         </header>
+        <script src="script.js"></script>
 </body>
 </html>
 

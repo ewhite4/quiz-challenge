@@ -1,11 +1,12 @@
 body {
-    background-color: aqua;
+    background-color: navy;
     width: 100%;
+    color: white;
 }
 
 .page-title {
     font-size: 70px;
-    color: black;
+    color: white;
     text-align: center;
 }
 
@@ -33,3 +34,20 @@ count {
     text-align: center;
 }
 
+.start-btn,
+.info-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-shadow: 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.info-box {
+    width: 540px;
+    background: #fff;
+    border-radius: 5px;
+    transform: translate(-50%,-50%)scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3 ease;
+}
