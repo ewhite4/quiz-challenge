@@ -1,5 +1,5 @@
 body {
-    background-color: navy;
+    background-color: darkred;
     width: 100%;
     color: white;
 }
@@ -25,7 +25,7 @@ p {
 .btn {
     font-size: 25px;
     border-radius: 30px;
-    background-color: red;
+    background-color: gray;
     /* display: table; */
     /* margin: auto; */
 }
@@ -39,7 +39,7 @@ count {
     position: absolute;
     top: 50%;
     left: 50%;
-    box-shadow: 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 8px 0 white, white;
 }
 
 .info-box {

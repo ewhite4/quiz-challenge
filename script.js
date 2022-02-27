@@ -11,10 +11,16 @@ var stopInterval = function() {
     clearInterval(timer);
 }
 
+// Questions
 var questions = [
     {
-        prompt: "What is JavaScript?\n(1) coding\n\(2) cooking\(c) construction",
-        answer: "a"
+        question: "What is JavaScript?",
+        answers: {
+            a: "cooking",
+            b: "source code",
+            c: "styling the website",
+        },
+        correctAnswer: "a"
     }
 ]
 
