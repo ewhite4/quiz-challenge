@@ -13,28 +13,7 @@ submitButton.onclick =  function (){
     }
 }
 
-// Questions
-var questions = [
-    {
-        question: "What is JavaScript?",
-        answers: {
-            a: "cooking",
-            b: "source code",
-            c: "styling the website",
-        },
-        correctAnswer: "a"
-    },
 
-    {
-        question: "When was JavaScript made?",
-        answers: {
-            a: '1993',
-            b: '2002',
-            c: '2006',
-        },
-        correctAnswer: 'c'
-    }
-];
 
 function showQuestions(questions, quizContainer){
     var output = [];
@@ -78,36 +57,38 @@ function showResults(questions, quizContainer, resultsContainer){
     resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
 }
 
-console.log
-
 // submit button, show results
 
-submitButton.onclick = function(){
-    showResults(questions, quizContainer, resultsContainer);
-}
+// submitButton.onclick = function(){
+//     showResults(questions, quizContainer, resultsContainer);
+// }
 
 var quizContainer = document.getElementById('quiz');
 var results = document.getElementById('results');
 var submitButton = document.getElementById('submit');
+var startButton = document.getElementById('start');
+var title = document.getElementById('questions');
+var getAnswers = document.getElementById('answers');
 
-generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
+startButton.addEventListener("click", function(){
+   title.textContent=(questions[0].question);
+})
+
+startButton.addEventListener("click", function(){
+    title.textContent=(String[0].answers);
+})
 
 // Timer set
 var count = 15;
-var timer = setInterval(function() {
-    console.log(count);
-    if(count === 0) {
-        stopInterval()
+var timer = setInterval(function(){
+    document.getElementById('count').innerHTML=count;
+    count--;
+    if (count === 0){
+        clearInterval();
+        document.getElementById('count').innerHTML='done';
+        alert("You are out of time!");
     }
 }, 1000);
-
-var stopInterval = function() {
-    console.log('time is up');
-    clearInterval(timer);
-}
-
-
-
 
 
 
@@ -124,3 +105,26 @@ var stopInterval = function() {
 //     }
 // }
 // alert("Score " + score + "/" + questions.length);
+
+// Questions
+var questions = [
+    {
+        question: "What is JavaScript?",
+        answers: {
+            a: "cooking",
+            b: "source code",
+            c: "styling the website",
+        },
+        correctAnswer: "a"
+    },
+
+    {
+        question: "When was JavaScript made?",
+        answers: {
+            a: '1993',
+            b: '2002',
+            c: '2006',
+        },
+        correctAnswer: 'c'
+    }
+];

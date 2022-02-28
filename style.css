@@ -33,18 +33,43 @@ body {
     /* margin: auto; */
 }
 
-.info-box{
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    box-shadow: 4px 8px 0 black, black;
+.questions {
+    text-align: center;
+    color: red;
+    font-size: larger;
 }
 
+.info-box{
+    position: center;
+    text-align: center;
+    top: 30%;
+    left: 50%;
+}
+
+.info{
+    border: 10px;
+    box-shadow: blue;
+}
 .submit{
     font-size: 25px;
     background-color: black;
     border-radius: 5px;
     padding: 10 px;
+}
 
+.quiz box {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    font-size: small;
+    display: block;
+    color:blue
+}
+
+section {
+    padding: 25px 30px 20px 40 px;
+    background: red;
 }
 
