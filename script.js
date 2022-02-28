@@ -1,14 +1,16 @@
-var count = 15;
-var timer = setInterval(function() {
-    console.log(count);
-    if(count === 0) {
-        stopInterval()
-    }
-}, 1000);
+function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 
-var stopInterval = function() {
-    console.log('time is up');
-    clearInterval(timer);
+ function showQuestions(questions, quizContainer){
+ }
+
+ function showResults(questions, quizContainer, resultsContainer){
+ }
+
+showQuestions(questions, quizContainer);
+
+submitButton.onclick =  function (){
+    showResults(questions, quizContainer,resultsContainer);
+    }
 }
 
 // Questions
@@ -76,6 +78,8 @@ function showResults(questions, quizContainer, resultsContainer){
     resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
 }
 
+console.log
+
 // submit button, show results
 
 submitButton.onclick = function(){
@@ -87,6 +91,25 @@ var results = document.getElementById('results');
 var submitButton = document.getElementById('submit');
 
 generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
+
+// Timer set
+var count = 15;
+var timer = setInterval(function() {
+    console.log(count);
+    if(count === 0) {
+        stopInterval()
+    }
+}, 1000);
+
+var stopInterval = function() {
+    console.log('time is up');
+    clearInterval(timer);
+}
+
+
+
+
+
 
 // var questions = []
 // var score = 0;
