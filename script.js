@@ -21,19 +21,83 @@ var questions = [
             c: "styling the website",
         },
         correctAnswer: "a"
+    },
+
+    {
+        question: "When was JavaScript made?",
+        answers: {
+            a: '1993',
+            b: '2002',
+            c: '2006',
+        },
+        correctAnswer: 'c'
     }
-]
+];
 
-var questions = []
-var score = 0;
+function showQuestions(questions, quizContainer){
+    var output = [];
+    var answers;
 
-for(var i=0; i < questions.length; i++){
-    var response = window.prompt(questions[i].prompt);
-    if(response == questions[i].answer){
-        score++;
-        alert("Correct!");
-    } else {
-        alert("Wrong!");
+    for (var i=0; i<questions.length; i++){
+
+        answers = [];
+
+        for(letter in questions[i].answers){
+            answers.push(
+                '<label>'
+                + '<input type="'
+            )
+        }
     }
 }
-alert("Score " + score + "/" + questions.length);
+
+function showResults(questions, quizContainer, resultsContainer){
+
+    var answerContainers = quizContainer.querySelectorAll('.answers');
+
+    var useranswer = '';
+    var numCorrect = 0;
+
+    for(var i=0; i<questions.length; i++){
+
+        userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+
+        if(userAnswer===questions[i].correctAnswer){
+
+            numCorrect++;
+
+            answerContainers[i].style.color = 'green';
+        }
+
+        else{
+            answerContainers[i].style.color = 'red';
+        }
+    }
+    resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+}
+
+// submit button, show results
+
+submitButton.onclick = function(){
+    showResults(questions, quizContainer, resultsContainer);
+}
+
+var quizContainer = document.getElementById('quiz');
+var results = document.getElementById('results');
+var submitButton = document.getElementById('submit');
+
+generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
+
+// var questions = []
+// var score = 0;
+
+// for(var i=0; i < questions.length; i++){
+//     var response = window.prompt(questions[i].prompt);
+//     if(response == questions[i].answer){
+//         score++;
+//         alert("Correct!");
+//     } else {
+//         alert("Wrong!");
+//     }
+// }
+// alert("Score " + score + "/" + questions.length);
